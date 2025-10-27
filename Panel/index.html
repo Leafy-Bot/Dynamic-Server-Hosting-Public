@@ -1,0 +1,24 @@
+<h1>Panel (Basic)</h1>
+
+<div id="status" style="margin:1em 0; font-weight:bold;">Loading status...</div>
+
+<form method="post" action="/start">
+  <button>Start Server</button>
+</form>
+<form method="post" action="/stop">
+  <button>Stop Server</button>
+</form>
+
+<script>
+async function updateStatus(){
+  try{
+    const res = await fetch('/status');
+    const text = await res.text();
+    document.getElementById('status').innerHTML = text;
+  } catch (e) {
+    document.getElementById('status').textContent = 'Error fetching status';
+  }
+}
+updateStatus();
+setInterval(updateStatus, 5000);
+</script>
