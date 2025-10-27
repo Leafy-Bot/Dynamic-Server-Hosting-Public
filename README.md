@@ -1,4 +1,4 @@
-# LHS Panel & Agent (Basic)
+# Dynamic Server Hosting Panel & CDaemon (Basic)
 
 Small control panel (Flask) and a simple agent (C++ HTTP server) to start/stop a Docker container and report status.
 
