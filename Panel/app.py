@@ -1,4 +1,4 @@
-from flask import flash, render_template, request
+from flask import flask, render_template, request
 import requests
 
 AGENT_URL = "http://localhost:9000"
